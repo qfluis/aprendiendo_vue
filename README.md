@@ -17,8 +17,7 @@ En fichero `.html` añadir:
     <title>Vue.js Intro</title>
     <script src="https://unpkg.com/vue@next"></script>
 </head>
-<body>
-    
+<body>    
     <!-- Control absoluto de este DIV -->
     <div id="myApp">
         <h1>Batman quotes  <small>{{ newQuote }}</small> </h1>
@@ -26,9 +25,7 @@ En fichero `.html` añadir:
           type="text"
           v-model="newQuote"
           v-on:keypress.enter="addQuote">
-
-        <hr>
-       
+        <hr>       
         <ul>
             <li v-for="({ quote, author }, index) in quotes">
                 <span>{{ index + 1 }} - {{ quote }}</span>
@@ -36,12 +33,8 @@ En fichero `.html` añadir:
                 <blockquote v-show="false">-{{ author }}</blockquote>
             </li>
         </ul>
-
-    </div>
-    
-    
+    </div>    
     <script src="app.js"></script>
-
 </body>
 </html>
 ```
