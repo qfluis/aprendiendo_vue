@@ -7,7 +7,15 @@ Repo de aprendizaje de Vue.
 
 ## Introducción a Vue
 Ver ejemplo en [01-bases](./01-bases)
-### Uso de Vue con CDN
+## Instalaciones
+- Node JS
+- Vue/cli (`npm install -g @vue/cli`, `vue --version`)
+- Vetur. Extensión vue para VSC.
+- Typescript importer. Extensión VSC. Ayuda con las autoimportaciones.
+- Vue.js devtools, extensión Chrome.
+
+
+### Uso de Vue con CDN y Options api
 En fichero `index.html`:
 ```
 <!DOCTYPE html>
@@ -69,3 +77,12 @@ app.mount('#myApp')
 ```
 - Entre `{{ }}` podemos añadir variables y algunas expresiones javascript
 - En `data(){ return { variable:valor }}` introducimos las variables
+- En `methods: { nombreMetodo(){...} }` introducimos los métodos
+- Si en un input añadimos `v-model="variable"`, hacemos 2-ways data binding (lo que se actualiza por js se muestra en input y lo que se actualiza en el input se actualiza en js +-)
+- `v-on:keypress.enter="funcion"`, v-on nos permite, trabajar con eventos, por defecto la funcion recibe el evento (no hace falta especificarlo). Si hubiese que enviar algún parámetro mas se pondría de la siguiente manera: `v-on:keypress.enter="function(param, $event)"`.`v-on`
+- `v-for="({ quote, author }, index) in quotes"`, permite hacer un for en el template html.
+- `v-if="author"` y `v-show="condicion"`, muestran un contenido según la condición. Tienen algunas diferencias, la principal es que v-show oculta por css y v-if no genera el contenido. 
+### Vue cli
+- `vue create nombreProyecto`, crea un proyecto con Vue.
+- `npm run serve`, para iniciar servidor.
+
