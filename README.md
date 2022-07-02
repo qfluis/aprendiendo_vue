@@ -82,7 +82,7 @@ app.mount('#myApp')
 - `v-on:keypress.enter="funcion"`, v-on nos permite, trabajar con eventos, por defecto la funcion recibe el evento (no hace falta especificarlo). Si hubiese que enviar algún parámetro mas se pondría de la siguiente manera: `v-on:keypress.enter="function(param, $event)"`.`v-on`
 - `v-for="({ quote, author }, index) in quotes"`, permite hacer un for en el template html.
 - `v-if="author"` y `v-show="condicion"`, muestran un contenido según la condición. Tienen algunas diferencias, la principal es que v-show oculta por css y v-if no genera el contenido. 
-### Vue cli
+### Crear proyecto con Vue cli
 - `vue create nombreProyecto`, crea un proyecto con Vue.
 - `npm run serve`, para iniciar servidor.
 
