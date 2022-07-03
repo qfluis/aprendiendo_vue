@@ -18,8 +18,11 @@ export default {
         nombre: String,
         start: {
             type: Number,
-            default: 1
+            default: 1,
             //required: true
+            validator( value ) {
+                return value >= 0
+            }
         }
     },
     name: 'Counter',
@@ -36,7 +39,6 @@ export default {
         tituloCustom(){
             return this.nombre || 'Contador genérico'
         }
-
     },
     methods: {  // Se ejecuta cada vez que se llama
         cuadrado(){
